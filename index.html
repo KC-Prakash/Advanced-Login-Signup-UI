@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login &amp; Signup</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+</head>
+
+<body>
+    <!-- Sign Up Form -->
+    <div class="form-container sign-up-form">
+        <div class="imgBox sign-up-imgBox">
+            <div class="sliding-link">
+                <p>Already a member?</p>
+                <span class="sign-in-btn" role="button" tabindex="0">Sign in</span>
+            </div>
+            <img src="assets/images/login.svg" height="300" width="300" alt="Sign up illustration" />
+        </div>
+        <div class="form-box sign-up-box">
+            <h2>Sign up</h2>
+            <div class="login-options">
+                <div class="other-logins" role="group" aria-label="Sign up with social accounts">
+                    <a href="#" aria-label="Sign up with Google"><img src="assets/images/google.png" alt="Google" /></a>
+                    <a href="#" aria-label="Sign up with Facebook"><img src="assets/images/facebook.png"
+                            alt="Facebook" /></a>
+                    <a href="#" aria-label="Sign up with Twitter"><img src="assets/images/twitter.png"
+                            alt="Twitter" /></a>
+                </div>
+                <p class="text">Or, sign up with email</p>
+            </div>
+            <form action="#" novalidate>
+                <div class="field">
+                    <i class="uil uil-at" aria-hidden="true"></i>
+                    <input id="signup-email" type="email" placeholder="Email address" autocomplete="email" required />
+                    <div class="field-actions">
+                        <span class="clear-btn" id="clear-email" aria-label="Clear email">✕</span>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <i class="uil uil-user" aria-hidden="true"></i>
+                    <input id="signup-username" type="text" placeholder="Full name" autocomplete="name" required />
+                    <div class="field-actions">
+                        <span class="clear-btn" id="clear-username" aria-label="Clear name">✕</span>
+                    </div>
+                </div>
+                <div class="field">
+                    <i class="uil uil-lock-alt" aria-hidden="true"></i>
+                    <input class="password-input" id="password" type="password" placeholder="Password"
+                        autocomplete="new-password" required />
+                    <div class="field-actions">
+                        <span class="clear-btn" id="clear-password" aria-label="Clear password">✕</span>
+                        <div class="eye-btn" role="button" aria-label="Toggle password visibility" tabindex="0">
+                            <i class="uil uil-eye-slash" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div id="password-strength" class="password-strength" role="progressbar" aria-label="Password strength">
+                </div>
+                <div id="password-requirements" class="password-requirements">
+                    <div class="req-item invalid" id="req-length">
+                        <span class="req-icon">✕</span> At least 8 characters
+                    </div>
+                    <div class="req-item invalid" id="req-uppercase">
+                        <span class="req-icon">✕</span> Contains uppercase letter (A-Z)
+                    </div>
+                    <div class="req-item invalid" id="req-lowercase">
+                        <span class="req-icon">✕</span> Contains lowercase letter (a-z)
+                    </div>
+                    <div class="req-item invalid" id="req-number">
+                        <span class="req-icon">✕</span> Contains number (0-9)
+                    </div>
+                    <div class="req-item invalid" id="req-special">
+                        <span class="req-icon">✕</span> Contains special character (!@#$%^&*)
+                    </div>
+                </div>
+
+                <div class="field">
+                    <i class="uil uil-lock-access"></i>
+                    <input class="password-input" id="confirm-password" type="password" placeholder="Confirm password"
+                        autocomplete="new-password" required />
+                    <div class="field-actions">
+                        <span class="clear-btn" id="clear-confirm" aria-label="Clear confirm password">✕</span>
+                        <div class="eye-btn" role="button" aria-label="Toggle confirm password visibility" tabindex="0">
+                            <i class="uil uil-eye-slash" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div id="password-error" class="error-message" role="alert"></div>
+                <input class="submit-btn" type="submit" value="Create account" />
+            </form>
+        </div>
+    </div>
+
+    <!-- Sign In Form -->
+    <div class="form-container sign-in-form show">
+        <div class="form-box sign-in-box">
+            <h2>Welcome back</h2>
+            <form action="#" novalidate>
+                <div class="field">
+                    <i class="uil uil-at" aria-hidden="true"></i>
+                    <input id="login-email" type="email" placeholder="Email address" autocomplete="email" required />
+                    <div class="field-actions">
+                        <span class="clear-btn" id="clear-login-email" aria-label="Clear email">✕</span>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <i class="uil uil-lock-alt" aria-hidden="true"></i>
+                    <input class="password-input" id="login-password" type="password" placeholder="Password"
+                        autocomplete="current-password" required />
+                    <div class="field-actions">
+                        <span class="clear-btn" id="clear-login-password" aria-label="Clear password">✕</span>
+                        <div class="eye-btn" role="button" aria-label="Toggle password visibility" tabindex="0">
+                            <i class="uil uil-eye-slash" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="forgot-link">
+                    <a href="request-reset-form.html">Forgot password?</a>
+                </div>
+                <input class="submit-btn" type="submit" value="Login" />
+            </form>
+            <div class="login-options">
+                <p class="text">Or, login with</p>
+                <div class="other-logins" role="group" aria-label="Login with social accounts">
+                    <a href="#" aria-label="Login with Google"><img src="assets/images/google.png" alt="Google" /></a>
+                    <a href="#" aria-label="Login with Facebook"><img src="assets/images/facebook.png"
+                            alt="Facebook" /></a>
+                    <a href="#" aria-label="Login with Twitter"><img src="assets/images/twitter.png"
+                            alt="Twitter" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="imgBox sign-in-imgBox">
+            <div class="sliding-link">
+                <p>Don't have an account?</p>
+                <span class="sign-up-btn" role="button" tabindex="0">Sign up</span>
+            </div>
+            <img src="assets/images/signup.svg" height="300" width="300" alt="Login illustration" />
+        </div>
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
