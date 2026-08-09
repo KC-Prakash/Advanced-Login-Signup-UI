@@ -136,7 +136,10 @@ function updateEmailValidation(page) {
   const field = emailInput.parentNode;
 
   if (!emailInput.value) {
-    validation.style.display = 'none';
+    // यदि validation span छ भने मात्र त्यसको style चेन्ज गर्ने
+    if (validation) {
+      validation.style.display = 'none';
+    }
     field.classList.remove('valid', 'invalid');
     return;
   }
@@ -146,14 +149,18 @@ function updateEmailValidation(page) {
   if (result.valid) {
     field.classList.add('valid');
     field.classList.remove('invalid');
-    validation.style.display = 'none';
-    validation.className = 'validation-icon';
+    if (validation) {
+      validation.style.display = 'none';
+      validation.className = 'validation-icon';
+    }
   } else {
     field.classList.add('invalid');
     field.classList.remove('valid');
-    validation.innerHTML = '✕';
-    validation.className = 'validation-icon invalid-icon';
-    validation.style.display = 'flex';
+    if (validation) {
+      validation.innerHTML = '✕';
+      validation.className = 'validation-icon invalid-icon';
+      validation.style.display = 'flex';
+    }
   }
 }
 
