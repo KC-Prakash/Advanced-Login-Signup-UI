@@ -2,6 +2,12 @@
 
 A modern, responsive, and interactive Login and Signup system built with **HTML, CSS, and Vanilla JavaScript**. This project includes strict real-time form validation, password strength checking, and a complete UI flow for password recovery.
 
+<img width="1870" height="842" alt="image" src="https://github.com/user-attachments/assets/3ca1a1e1-e52c-4a3b-b9b6-ce0737f2dcc5" />
+
+<img width="1862" height="842" alt="image" src="https://github.com/user-attachments/assets/795b468d-b9c7-4dc7-bd74-c8a25255e1ed" />
+
+
+
 ## ✨ Features
 
 - **Interactive Forms:** Smooth sliding transition between Login and Signup forms.
